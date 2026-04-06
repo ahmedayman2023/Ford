@@ -1,1 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@300;400;500;600;700&display=swap');
 @import "tailwindcss";
+
+@theme {
+  --font-sans: "Noto Sans Arabic", ui-sans-serif, system-ui, sans-serif;
+  --color-ford-blue: #003478;
+  --color-ford-dark: #002C5F;
+  --color-ford-light: #00549F;
+  --color-ford-gray: #F8F9FA;
+}
+
+@layer base {
+  body {
+    @apply bg-ford-gray text-gray-900;
+  }
+}
+
+.ford-gradient {
+  background: linear-gradient(135deg, var(--color-ford-blue) 0%, var(--color-ford-dark) 100%);
+}
+
+.ford-card {
+  @apply bg-white rounded-xl border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300;
+}
+
+.ford-button {
+  @apply bg-ford-blue text-white px-6 py-2.5 rounded-full font-bold hover:bg-ford-dark transition-all duration-300 active:scale-95;
+}
